@@ -327,6 +327,10 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
             Intent intent = new Intent(MainActivity.this,SearchActivity.class);
             startActivity(intent);
 
+        } else if (id == R.id.about) {
+            Intent intent = new Intent(MainActivity.this,About.class);
+            startActivity(intent);
+
         } else if (id == R.id.profile) {
             Intent intent = new Intent(MainActivity.this,Profile.class);
             startActivity(intent);

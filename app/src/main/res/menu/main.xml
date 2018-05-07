@@ -11,7 +11,7 @@
 
 
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/about"
         android:orderInCategory="100"
         android:title="About"
         app:showAsAction="never" />
@@ -22,9 +22,5 @@
         android:title="Profile"
         app:showAsAction="never" />
 
-    <item
-        android:id="@+id/logout"
-        android:orderInCategory="100"
-        android:title="Logout"
-        app:showAsAction="never" />
+
 </menu>

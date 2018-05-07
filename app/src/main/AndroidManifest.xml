@@ -73,7 +73,12 @@
             android:name=".Advanced"
             android:label="Advanced Search"
             android:theme="@style/AppTheme" />
-        <activity android:name=".Profile"></activity>
+        <activity android:name=".Profile"
+            android:label="Profile"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".About"
+            android:label="About"
+            android:theme="@style/AppTheme"/>
     </application>
 
 </manifest>
