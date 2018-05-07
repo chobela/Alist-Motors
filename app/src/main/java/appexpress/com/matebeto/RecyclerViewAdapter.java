@@ -57,7 +57,7 @@ public class RecyclerViewAdapter  extends RecyclerView.Adapter<RecyclerViewAdapt
 
         //Picasso.with(context).load("http://" + mydeals.getImage()).into(holder.imageView);
 
-        Glide.with(context).load("http://" + mydeals.getImage())
+        Glide.with(context).load(mydeals.getImage())
                 .placeholder(R.drawable.fff)
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(holder.imageView);

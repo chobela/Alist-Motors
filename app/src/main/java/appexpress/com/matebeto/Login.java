@@ -156,6 +156,7 @@ public class Login extends AppCompatActivity {
                         JSONObject user = jObj.getJSONObject("user");
                         String name = user.getString("name");
                         String email = user.getString("email");
+                        String phone = user.getString("phone");
                         String town = user.getString("town");
 
                         // save user data
@@ -163,12 +164,13 @@ public class Login extends AppCompatActivity {
                                 .getDefaultSharedPreferences(Login.this);
                         SharedPreferences.Editor edit = sp.edit();
                         edit.putString("uid", uid);
-                        /*
+
                         edit.putString("name", name);
                         edit.putString("email", email);
+                        edit.putString("phone", phone);
                         edit.putString("town", town);
 
-                        edit.commit();*/
+                        edit.commit();
 
                         // Launch main activity
                         Intent intent = new Intent(Login.this,

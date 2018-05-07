@@ -17,9 +17,9 @@
         app:showAsAction="never" />
 
     <item
-        android:id="@+id/help"
+        android:id="@+id/profile"
         android:orderInCategory="100"
-        android:title="Help"
+        android:title="Profile"
         app:showAsAction="never" />
 
     <item

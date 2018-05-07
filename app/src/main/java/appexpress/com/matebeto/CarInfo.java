@@ -280,6 +280,4 @@ public class CarInfo extends AppCompatActivity implements AdapterView.OnItemSele
 
     }
 
-
-
 }

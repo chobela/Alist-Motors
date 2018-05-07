@@ -327,8 +327,8 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
             Intent intent = new Intent(MainActivity.this,SearchActivity.class);
             startActivity(intent);
 
-        } else if (id == R.id.help) {
-            Intent intent = new Intent(MainActivity.this,Help.class);
+        } else if (id == R.id.profile) {
+            Intent intent = new Intent(MainActivity.this,Profile.class);
             startActivity(intent);
 
         } else if (id == R.id.logout) {
