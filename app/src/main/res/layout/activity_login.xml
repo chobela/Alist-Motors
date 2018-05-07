@@ -1,0 +1,143 @@
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/avi"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            style="@style/AVLoadingIndicatorView"
+            app:indicatorName="LineSpinFadeLoaderIndicator"
+            app:indicatorColor="@color/colorAccent"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            />
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="20dp"
+            tools:context="appexpress.com.matebeto.Login"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+
+            <TextView
+                android:text="Login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="40dp"
+                android:textStyle="bold"
+                android:textSize="35dp"
+                />
+
+            <TextView
+                android:text="Login to your A-List Motors Account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="12dp"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                />
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:textColor="#000000"
+                    android:textColorHint="@color/colorAccent"
+                    android:paddingTop="10dp"/>
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:textColor="#000000"
+                    android:textColorHint="@color/colorAccent" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:id="@+id/btnLogin"
+                android:layout_below="@+id/btnLogin"
+                android:layout_alignRight="@+id/button3"
+                android:layout_alignEnd="@+id/button3"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:onClick="onClick"
+                android:textAllCaps="false"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sign Up"
+                android:id="@+id/register"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:onClick="onClick"
+                android:textAllCaps="false"
+
+                />
+
+            <TextView
+                android:text="Forgot Password? click here"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="12dp"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:textColor="@color/colorAccent"
+                />
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:srcCompat="@drawable/fwww"
+                android:id="@+id/imageView"
+                android:layout_weight="0.81"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

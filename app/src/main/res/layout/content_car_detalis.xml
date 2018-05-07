@@ -1,0 +1,124 @@
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadeScrollbars="false"
+    android:scrollbarFadeDuration="0"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_car_detalis"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="appexpress.com.matebeto.CarDetalis"
+    tools:showIn="@layout/activity_car_detalis">
+
+
+
+    <TextView
+        android:text="+260979825070"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:id="@+id/number"
+        android:layout_weight="0.03"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:text="+260979825070"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:id="@+id/image"
+        android:layout_weight="0.03"
+        android:visibility="invisible"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/meal"
+            android:layout_weight="0.03"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:paddingTop="10dp"
+            android:paddingLeft="5dp"
+            android:text="7000"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:text="Price :"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/typetext"
+            android:layout_weight="0.03"
+            android:textStyle="bold"
+            android:paddingTop="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/price"
+            android:textStyle="bold"
+            android:paddingTop="5dp"
+            android:paddingLeft="8dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:text="Description :"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/towntext"
+            android:layout_weight="0.03"
+            android:textStyle="bold"
+            android:paddingTop="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/venue"
+            android:textStyle="bold"
+            android:paddingTop="5dp"
+            android:paddingLeft="8dp"/>
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="@dimen/fab_margin"
+        android:text="Interested"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:onClick="onClick"/>
+
+
+
+</LinearLayout>
+</android.support.v4.widget.NestedScrollView>

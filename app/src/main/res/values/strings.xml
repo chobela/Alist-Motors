@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">A-List Motors</string>
+    <string name="price">K400</string>
+    <string name="drawer_open">Drawer Opened</string>
+    <string name="drawer_close">Drawer Closed</string>
+
+    <string name="pref_header_about">About</string>
+    <string name="summary_about">The Recruiter is a KSM Management Consultant\'s driven recruitment initiative aimed at providing latest Jobs on a daily basis, and provideing a platform that simplifies the job application process</string>
+    <string name="app_version">2.0</string>
+    <string name="summary_support">Got any queries? We are happy to help!</string>
+    <string name="title_send_feedback">Send Feedback</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="url_privacy">http://appexpress.tk/policy.docx</string>
+    <string name="title_terms">Terms &amp; Conditions</string>
+    <string name="url_terms">http://appexpress.tk/policy.docx</string>
+    <string name="url_rate">https://play.google.com/store/apps/details?id=com.management.ksm.therecruiter</string>
+    <string name="title_version">Version</string>
+    <string name="choose_email_client">Choose email client</string>
+    <string name="key_send_feedback">key_send_feedback</string>
+    <string name="title_activity_cars">Cars</string>
+
+    <string name="action_add_favourite">Add to Favourites</string>
+    <string name="action_play_next">Call</string>
+    <string name="backdrop_title">A-List Motors</string>
+    <string name="backdrop_subtitle">Best cars in the country</string>
+    <string name="title_activity_car_detalis">CarDetalis</string>
+    <string name="title_activity_add_car">AddCar</string>
+</resources>

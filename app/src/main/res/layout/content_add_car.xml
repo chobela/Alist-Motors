@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="appexpress.com.matebeto.AddCar"
+    tools:showIn="@layout/activity_add_car"
+    android:orientation="vertical"
+    android:layout_marginTop="54dp">
+
+    <TextView
+        android:id="@+id/uid"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:visibility="invisible"
+        />
+
+
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:hint="Price"
+        android:text="advertising"
+        android:visibility="invisible"
+        android:inputType="text"
+        android:textColor="#000000"
+        android:textColorHint="@color/colorAccent"
+        android:padding="10dp"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:src="@drawable/placeholder"
+        android:id="@+id/imageView5"/>
+
+    <Button
+        android:id="@+id/buttonChoose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Image"
+        android:textAllCaps="false"
+        android:layout_gravity="left"
+        android:onClick="choose"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+
+        />
+
+</LinearLayout>
