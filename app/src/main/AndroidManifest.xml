@@ -60,11 +60,11 @@
         <activity
             android:name=".CarInfo"
             android:label="Vehicle Information"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".SearchActivity"
             android:label="Search"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Test"
             android:label="Search"
@@ -72,13 +72,13 @@
         <activity
             android:name=".Advanced"
             android:label="Advanced Search"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Profile"
             android:label="Profile"
             android:theme="@style/AppTheme"/>
         <activity android:name=".About"
             android:label="About"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

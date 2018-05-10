@@ -23,7 +23,6 @@ public class Signup extends AppCompatActivity {
     private Button btnRegister;
 
     private EditText inputname, inputemail, inputphone, inputtown, inputpassword;
-    private SessionManager session;
     private ProgressDialog pDialog;
 
 
@@ -42,21 +41,6 @@ public class Signup extends AppCompatActivity {
         // Progress dialog
         pDialog = new ProgressDialog(this);
         pDialog.setCancelable(false);
-
-        // Session manager
-        session = new SessionManager(getApplicationContext());
-
-        // SQLite database handler
-        // db = new SQLiteHandler(getApplicationContext());
-
-        // Check if user is already logged in or not
-        if (session.isLoggedIn()) {
-            // User is already logged in. Take him to main activity
-            Intent intent = new Intent(Signup.this,
-                    MainActivity.class);
-            startActivity(intent);
-            finish();
-        }
 
 
         // Register Button Click event

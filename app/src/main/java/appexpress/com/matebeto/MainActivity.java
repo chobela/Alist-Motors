@@ -83,6 +83,14 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        android.support.design.widget.FloatingActionButton fab = (android.support.design.widget.FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, CarInfo.class); startActivity(i);
+            }
+        });
+
 
         // Setup Actionbar / Toolbar
         mToolbar = (Toolbar) findViewById(R.id.action_bar);
@@ -318,12 +326,7 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-
-            Intent intent = new Intent(MainActivity.this,SettingsPrefActivity.class);
-            startActivity(intent);
-
-        } else if (id == R.id.action_search) {
+      if (id == R.id.action_search) {
             Intent intent = new Intent(MainActivity.this,SearchActivity.class);
             startActivity(intent);
 
@@ -332,15 +335,13 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
             startActivity(intent);
 
         } else if (id == R.id.profile) {
-            Intent intent = new Intent(MainActivity.this,Profile.class);
-            startActivity(intent);
+          Intent intent = new Intent(MainActivity.this, Profile.class);
+          startActivity(intent);
 
-        } else if (id == R.id.logout) {
-            logoutUser();
-
-
-            return true;
-        }
+      } else if (id == R.id.add) {
+          Intent intent = new Intent(MainActivity.this, CarInfo.class);
+          startActivity(intent);
+      }
 
         return super.onOptionsItemSelected(item);
     }

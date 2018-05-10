@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -114,6 +115,24 @@ public class RecyclerViewAdapter  extends RecyclerView.Adapter<RecyclerViewAdapt
 
         });
 
+        holder.  lview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                switch (v.getId()) {
+
+
+                    case (R.id.itemm):
+
+                        Intent intent = new Intent(context, CarDetalis.class);
+                        intent.putExtra("jobs",  deals.get(position));
+                        context.startActivity(intent);
+                        break;
+                }
+            }
+
+        });
+
 
     }
 
@@ -127,6 +146,7 @@ public class RecyclerViewAdapter  extends RecyclerView.Adapter<RecyclerViewAdapt
 
         TextView textViewMeal, textViewOldPrice, textViewPrice, textViewVenue, textViewMealid, textGetDeal;
         ImageView imageView, shareBtn;
+        LinearLayout lview;
 
 
         public ViewHolder(View itemView) {
@@ -141,6 +161,7 @@ public class RecyclerViewAdapter  extends RecyclerView.Adapter<RecyclerViewAdapt
             imageView = (ImageView) itemView.findViewById(R.id.imageq);
             shareBtn = (ImageView) itemView.findViewById(R.id.shareme);
             textGetDeal = (TextView) itemView.findViewById(R.id.getdeal) ;
+            lview = (LinearLayout) itemView.findViewById(R.id.itemm);
 
         }
 

@@ -1,6 +1,7 @@
 package appexpress.com.matebeto;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -53,7 +54,7 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHold
     }
 
     @Override
-    public void onBindViewHolder(final MyViewHolder holder, int position) {
+    public void onBindViewHolder(final MyViewHolder holder, final int position) {
         Deals album = albumList.get(position);
 
         holder.textViewMeal.setText(album.getMeal());
@@ -63,7 +64,7 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHold
         // loading album cover using Glide library
         Glide.with(mContext).load(album.getImage());
 
-        Glide.with(mContext).load("http://" + album.getImage())
+        Glide.with(mContext).load(album.getImage())
                 .placeholder(R.drawable.fff)
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(holder.thumbnail);
@@ -74,6 +75,17 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHold
                 showPopupMenu(holder.overflow);
             }
         });
+
+        holder.thumbnail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, CarDetalis.class);
+                intent.putExtra("jobs",  albumList.get(position));
+                mContext.startActivity(intent);
+            }
+        });
+
+
     }
 
     /**

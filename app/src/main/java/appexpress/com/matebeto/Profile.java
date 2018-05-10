@@ -1,9 +1,11 @@
 package appexpress.com.matebeto;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.EditText;
 
 public class Profile extends AppCompatActivity {
@@ -33,5 +35,10 @@ public class Profile extends AppCompatActivity {
         txtPhone.setText(phone);
         txtTown.setText(town);
         txtEmail.setText(email);
+    }
+
+    public void signup (View v) {
+        Intent intent = new Intent(Profile.this, Signup.class);
+        startActivity(intent);
     }
 }

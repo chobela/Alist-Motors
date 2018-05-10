@@ -33,6 +33,17 @@ public class CarDetalis extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),MainActivity.class));
+            }
+        });
+
         Deals carDetails = (Deals) getIntent().getSerializableExtra("jobs");
 
         imgHeader = (ImageView) findViewById(R.id.backdrop);
@@ -52,13 +63,11 @@ public class CarDetalis extends AppCompatActivity {
         tvImage = (TextView) findViewById(R.id.image);
         tvImage.setText(carDetails.getImage());
 
-        Glide.with(getApplicationContext()).load("http://" + carDetails.getImage())
+        Glide.with(getApplicationContext()).load(carDetails.getImage())
                 .thumbnail(0.5f)
                 .crossFade()
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(imgHeader);
-
-
     }
 
     private void initCollapsingToolbar() {

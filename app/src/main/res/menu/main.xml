@@ -9,7 +9,6 @@
         android:title="Search"/>
 
 
-
     <item
         android:id="@+id/about"
         android:orderInCategory="100"
@@ -20,6 +19,12 @@
         android:id="@+id/profile"
         android:orderInCategory="100"
         android:title="Profile"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/add"
+        android:orderInCategory="100"
+        android:title="Add a deal"
         app:showAsAction="never" />
 
 
