@@ -24,7 +24,25 @@
     <item
         android:id="@+id/add"
         android:orderInCategory="100"
-        android:title="Add a deal"
+        android:title="Sell"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/buy"
+        android:orderInCategory="100"
+        android:title="Buy"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/search"
+        android:orderInCategory="100"
+        android:title="Search"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/fav"
+        android:orderInCategory="100"
+        android:title="Favourites"
         app:showAsAction="never" />
 
 

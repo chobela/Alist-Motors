@@ -25,4 +25,6 @@
     <string name="backdrop_subtitle">Best cars in the country</string>
     <string name="title_activity_car_detalis">CarDetalis</string>
     <string name="title_activity_add_car">AddCar</string>
+
+    <string name="empty_list_text">Your Favourite items appear here</string>
 </resources>

@@ -13,6 +13,10 @@ public class Deals implements Serializable {
     private String image;
     private String date;
     private String comments;
+    private String transmission;
+    private String phone;
+    private String email;
+    private String town;
 
     public String getMealid() {
         return mealid;
@@ -85,4 +89,36 @@ public class Deals implements Serializable {
     public void setOldprice(String oldprice) {
         this.oldprice = oldprice;
     }
-} 
+
+    public String getTransmission() {
+        return transmission;
+    }
+
+    public void setTransmission(String transmission) {
+        this.transmission = transmission;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getTown() {
+        return town;
+    }
+
+    public void setTown(String town) {
+        this.town = town;
+    }
+}

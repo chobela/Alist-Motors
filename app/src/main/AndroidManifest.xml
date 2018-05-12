@@ -73,12 +73,21 @@
             android:name=".Advanced"
             android:label="Advanced Search"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Profile"
+        <activity
+            android:name=".Profile"
             android:label="Profile"
-            android:theme="@style/AppTheme"/>
-        <activity android:name=".About"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".About"
             android:label="About"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Favourites"
+            android:label="My Favourites"
+            android:theme="@style/AppTheme2" />
+        <activity android:name=".Modify"
+            android:label="Details"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

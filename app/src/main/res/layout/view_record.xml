@@ -1,0 +1,104 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/r1"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:text="1"
+        android:gravity="left"
+        android:id="@+id/id"
+        android:paddingLeft="5dp"
+        android:paddingRight="20dp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BMW"
+        android:id="@+id/car"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2000"
+        android:id="@+id/price"
+        android:textSize="15sp"
+        android:paddingTop="5dp"
+        android:paddingLeft="10dp"
+        android:paddingBottom="5dp"
+       />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ndola"
+        android:id="@+id/town"
+        android:textSize="15sp"
+        android:paddingTop="2dp"
+        android:paddingLeft="10dp"
+        android:paddingBottom="5dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="bla bla bla"
+        android:id="@+id/description"
+        android:textSize="15sp"
+        android:paddingTop="2dp"
+        android:paddingLeft="10dp"
+        android:paddingBottom="5dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="bla bla bla"
+        android:id="@+id/image"
+        android:textSize="15sp"
+        android:paddingTop="2dp"
+        android:paddingLeft="10dp"
+        android:paddingBottom="5dp"
+        android:visibility="invisible"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:text="bla bla bla"
+        android:id="@+id/phone"
+        android:textSize="15sp"
+        android:paddingTop="2dp"
+        android:paddingLeft="10dp"
+        android:paddingBottom="5dp"
+        android:visibility="invisible"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:text="bla bla bla"
+        android:id="@+id/email"
+        android:textSize="15sp"
+        android:paddingTop="2dp"
+        android:paddingLeft="10dp"
+        android:paddingBottom="5dp"
+        android:visibility="invisible"
+        />
+
+
+</LinearLayout>

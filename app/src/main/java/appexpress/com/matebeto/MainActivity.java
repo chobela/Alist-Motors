@@ -67,6 +67,11 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
     public static final String JSON_VENUE = "venue";
     public static final String JSON_IMAGE = "image";
     public static final String JSON_MEALID = "mealid";
+    public static final String JSON_TRANS = "tranmission";
+    public static final String JSON_PHONE = "phone";
+    public static final String JSON_EMAIL = "email";
+    public static final String JSON_TOWN = "town";
+
 
 
     JsonArrayRequest jsonArrayRequest ;
@@ -87,7 +92,7 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, CarInfo.class); startActivity(i);
+                Intent i = new Intent(MainActivity.this, AddCar.class); startActivity(i);
             }
         });
 
@@ -231,6 +236,12 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
 
                 Deal.setMealid(json.getString(JSON_MEALID));
 
+                Deal.setPhone(json.getString(JSON_PHONE));
+
+                Deal.setEmail(json.getString(JSON_EMAIL));
+
+                Deal.setTown(json.getString(JSON_TOWN));
+
             } catch (JSONException e) {
 
                 e.printStackTrace();
@@ -340,6 +351,19 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
 
       } else if (id == R.id.add) {
           Intent intent = new Intent(MainActivity.this, CarInfo.class);
+          startActivity(intent);
+
+      } else if (id == R.id.buy) {
+              Intent intent = new Intent(MainActivity.this, Advanced.class);
+              startActivity(intent);
+
+      } else if (id == R.id.search) {
+          Intent intent = new Intent(MainActivity.this, SearchActivity.class);
+          startActivity(intent);
+      }
+
+          else if (id == R.id.fav) {
+          Intent intent = new Intent(MainActivity.this, Favourites.class);
           startActivity(intent);
       }
 

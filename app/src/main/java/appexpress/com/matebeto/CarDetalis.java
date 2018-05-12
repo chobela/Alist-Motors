@@ -11,6 +11,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
@@ -24,6 +25,11 @@ public class CarDetalis extends AppCompatActivity {
     TextView tvPrice;
     TextView tvVenue;
     TextView tvImage;
+    TextView tvPhone;
+    TextView tvEmail;
+    TextView tvTown;
+    private DBManager dbManager;
+
 
 
     @Override
@@ -51,7 +57,10 @@ public class CarDetalis extends AppCompatActivity {
 
         initCollapsingToolbar();
 
-        tvMeal = (TextView) findViewById(R.id.meal);
+        dbManager = new DBManager(this);
+        dbManager.open();
+
+        tvMeal = (TextView) findViewById(R.id.car);
         tvMeal.setText(carDetails.getMeal());
 
         tvPrice = (TextView) findViewById(R.id.price);
@@ -62,6 +71,15 @@ public class CarDetalis extends AppCompatActivity {
 
         tvImage = (TextView) findViewById(R.id.image);
         tvImage.setText(carDetails.getImage());
+
+        tvPhone = (TextView) findViewById(R.id.phone);
+        tvPhone.setText(carDetails.getPhone());
+
+        tvEmail = (TextView) findViewById(R.id.email);
+        tvEmail.setText(carDetails.getEmail());
+
+        tvTown = (TextView) findViewById(R.id.townr);
+        tvTown.setText(carDetails.getTown());
 
         Glide.with(getApplicationContext()).load(carDetails.getImage())
                 .thumbnail(0.5f)
@@ -96,6 +114,21 @@ public class CarDetalis extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    public void onClick (View view) {
+
+        final String car = tvMeal.getText().toString();
+        final String price = tvPrice.getText().toString();
+        final String description = tvVenue.getText().toString();
+        final String image = tvImage.getText().toString();
+        final String phone = tvPhone.getText().toString();
+        final String email = tvEmail.getText().toString();
+        final String town = tvTown.getText().toString();
+
+        dbManager.insert(car, price, description, image, phone, email, town);
+
+        Toast.makeText(getApplicationContext(),"Saved to my favourites", Toast.LENGTH_LONG).show();
     }
 
 }
