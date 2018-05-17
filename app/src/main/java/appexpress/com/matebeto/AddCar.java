@@ -101,6 +101,7 @@ public class AddCar extends AppCompatActivity  {
         String uid = tvView.getText().toString().trim();
         String name = txtName.getText().toString().trim();
 
+
         //Uploading code
         try {
             String uploadId = UUID.randomUUID().toString();
