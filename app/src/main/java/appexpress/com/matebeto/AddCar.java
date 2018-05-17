@@ -124,7 +124,8 @@ public class AddCar extends AppCompatActivity  {
 
     }
 
-    //method to show file chooser
+
+    //method toshow file chooser
     private void showFileChooser() {
         Intent intent = new Intent();
         intent.setType("image/*");
