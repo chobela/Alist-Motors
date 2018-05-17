@@ -61,12 +61,12 @@
         android:textSize="15sp"
         android:paddingTop="2dp"
         android:paddingLeft="10dp"
-        android:paddingBottom="5dp"
+
         />
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="1dp"
         android:text="bla bla bla"
         android:id="@+id/image"
         android:textSize="15sp"

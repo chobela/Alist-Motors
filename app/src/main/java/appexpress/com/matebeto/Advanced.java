@@ -53,7 +53,7 @@ public class Advanced extends AppCompatActivity implements AdapterView.OnItemSel
     public static final String JSON_MEALID = "mealid";
 
     private EditText txtMake, txtModel, txtEngine, txtColor, txtPrice, txtHprice, txtDescription;
-    private Spinner txtLocation, txtCurrency, txtDuty, txtFuel, txtInterior;
+    private Spinner txtLocation, txtCurrency, txtDuty, txtFuel, txtInterior, txtTransmission;
 
     JsonArrayRequest jsonArrayRequest ;
 
@@ -97,6 +97,7 @@ public class Advanced extends AppCompatActivity implements AdapterView.OnItemSel
         txtPrice = (EditText) findViewById(R.id.price);
         txtDescription = (EditText) findViewById(R.id.venue);
         txtHprice = (EditText) findViewById(R.id.hprice);
+        txtTransmission = (Spinner) findViewById(R.id.transmission);
 
         String indicator=getIntent().getStringExtra("loading");
         avii= (AVLoadingIndicatorView) findViewById(R.id.avii);
@@ -116,6 +117,7 @@ public class Advanced extends AppCompatActivity implements AdapterView.OnItemSel
         txtDuty.setOnItemSelectedListener(this);
         txtFuel.setOnItemSelectedListener(this);
         txtInterior.setOnItemSelectedListener(this);
+        txtTransmission.setOnItemSelectedListener(this);
 
         // Spinner Drop down elements
         List<String> location = new ArrayList<String>();
@@ -151,6 +153,12 @@ public class Advanced extends AppCompatActivity implements AdapterView.OnItemSel
         interior.add("Leather");
         interior.add("Other");
 
+        List<String> transmission = new ArrayList<String>();
+        location.add("");
+        location.add("Manual");
+        location.add("Automatic");
+        location.add("Other");
+
 
         // Creating adapter for spinner
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, location);
@@ -158,6 +166,8 @@ public class Advanced extends AppCompatActivity implements AdapterView.OnItemSel
         ArrayAdapter<String> dataAdapter3 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, duty);
         ArrayAdapter<String> dataAdapter4 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, fuel);
         ArrayAdapter<String> dataAdapter5 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, interior);
+        ArrayAdapter<String> dataAdapter6 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, transmission);
+
 
         // Drop down layout style - list view with radio button
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -165,6 +175,7 @@ public class Advanced extends AppCompatActivity implements AdapterView.OnItemSel
         dataAdapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         dataAdapter4.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         dataAdapter5.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        dataAdapter6.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         // attaching data adapter to spinner
         txtLocation.setAdapter(dataAdapter);
@@ -172,6 +183,7 @@ public class Advanced extends AppCompatActivity implements AdapterView.OnItemSel
         txtDuty.setAdapter(dataAdapter3);
         txtFuel.setAdapter(dataAdapter4);
         txtInterior.setAdapter(dataAdapter5);
+        txtTransmission.setAdapter(dataAdapter6);
     }
 
 

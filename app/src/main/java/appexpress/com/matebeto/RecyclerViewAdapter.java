@@ -59,7 +59,6 @@ public class RecyclerViewAdapter  extends RecyclerView.Adapter<RecyclerViewAdapt
         //Picasso.with(context).load("http://" + mydeals.getImage()).into(holder.imageView);
 
         Glide.with(context).load(mydeals.getImage())
-                .placeholder(R.drawable.fff)
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(holder.imageView);
 
@@ -73,8 +72,8 @@ public class RecyclerViewAdapter  extends RecyclerView.Adapter<RecyclerViewAdapt
 
                         Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
                         sharingIntent.setType("text/plain");
-                        String shareBody = mydeals.getMeal() + " https://play.google.com/store/apps/details?id=com.bolayapazed.applink";
-                        sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Wire Direct");
+                        String shareBody = mydeals.getMeal() + " https://play.google.com/store/apps/details?id=";
+                        sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "A-List Motors");
                         sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
                         context.startActivity(Intent.createChooser(sharingIntent, "Share via"));
                         break;

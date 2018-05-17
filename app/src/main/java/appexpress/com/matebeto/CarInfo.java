@@ -3,7 +3,9 @@ package appexpress.com.matebeto;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -12,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
@@ -36,6 +39,7 @@ public class CarInfo extends AppCompatActivity implements AdapterView.OnItemSele
 
     private EditText txtMake, txtModel, txtEngine, txtColor, txtPrice, txtFeatures, txtDescription;
     private Spinner txtLocation, txtCurrency, txtDuty, txtFuel, txtInterior;
+    private Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,7 +76,14 @@ public class CarInfo extends AppCompatActivity implements AdapterView.OnItemSele
         txtDescription = (EditText) findViewById(R.id.venue);
 
 
+
         String uid = UUID.randomUUID().toString();
+
+        SharedPreferences sp = PreferenceManager
+                .getDefaultSharedPreferences(CarInfo.this);
+        SharedPreferences.Editor edit = sp.edit();
+        edit.putString("uid", uid);
+
         txtUid.setText(uid);
 
         // Spinner click listener
@@ -95,7 +106,7 @@ public class CarInfo extends AppCompatActivity implements AdapterView.OnItemSele
         List<String> currency = new ArrayList<String>();
         currency.add("");
         currency.add("$");
-        currency.add("K");
+        currency.add("ZMW");
 
         List<String> duty = new ArrayList<String>();
         duty.add("");
@@ -139,7 +150,10 @@ public class CarInfo extends AppCompatActivity implements AdapterView.OnItemSele
         txtDuty.setAdapter(dataAdapter3);
         txtFuel.setAdapter(dataAdapter4);
         txtInterior.setAdapter(dataAdapter5);
+
+
     }
+
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -157,6 +171,7 @@ public class CarInfo extends AppCompatActivity implements AdapterView.OnItemSele
         getMenuInflater().inflate(R.menu.addcar, menu);
         return true;
     }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

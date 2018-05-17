@@ -1,6 +1,7 @@
 package appexpress.com.matebeto;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
@@ -29,6 +30,8 @@ public class CarDetalis extends AppCompatActivity {
     TextView tvEmail;
     TextView tvTown;
     private DBManager dbManager;
+
+    ImageView callBtn, msgBtn;
 
 
 
@@ -81,11 +84,58 @@ public class CarDetalis extends AppCompatActivity {
         tvTown = (TextView) findViewById(R.id.townr);
         tvTown.setText(carDetails.getTown());
 
+        callBtn = (ImageView) findViewById(R.id.callbtn);
+        msgBtn = (ImageView) findViewById(R.id.msgbtn) ;
+
         Glide.with(getApplicationContext()).load(carDetails.getImage())
                 .thumbnail(0.5f)
                 .crossFade()
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(imgHeader);
+
+
+        callBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                switch (v.getId()) {
+
+                    case (R.id.callbtn):
+                        try {
+                            String uri = "tel:" + tvPhone.getText().toString();
+                            Intent dialIntent = new Intent(Intent.ACTION_DIAL, Uri.parse(uri));
+
+                            startActivity(dialIntent);
+                        } catch (Exception e) {
+                            Toast.makeText(getApplicationContext(), "Your call has failed...",
+                                    Toast.LENGTH_LONG).show();
+                            e.printStackTrace();
+                        }
+                        break;
+                }
+            }
+
+        });
+
+        msgBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                switch (v.getId()) {
+
+                    case (R.id.msgbtn):
+                        Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
+                        emailIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        emailIntent.setType("vnd.android.cursor.item/email");
+                        emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{tvEmail.getText().toString()});
+                        emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, "");
+                        startActivity(Intent.createChooser(emailIntent, "Send mail using..."));
+
+                        break;
+                }
+            }
+
+        });
     }
 
     private void initCollapsingToolbar() {

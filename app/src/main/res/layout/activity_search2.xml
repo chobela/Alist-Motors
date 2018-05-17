@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context="appexpress.com.matebeto.SearchActivity"
-    android:background="@drawable/carback">
+  >
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appb"
@@ -78,9 +78,6 @@
                 android:layout_marginBottom="10dp"
                 android:hint="Make"
                 android:inputType="text"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:textColorHint="#ffffff"
                 android:padding="10dp"
                 android:textAllCaps="true"/>
         </android.support.design.widget.TextInputLayout>
@@ -97,8 +94,6 @@
                 android:layout_marginBottom="10dp"
                 android:hint="Model"
                 android:inputType="text"
-                android:textColor="#ffffff"
-                android:textColorHint="#ffffff"
                 android:padding="10dp"
                 android:textAllCaps="true"/>
         </android.support.design.widget.TextInputLayout>
@@ -117,8 +112,6 @@
                 android:layout_marginBottom="10dp"
                 android:hint="Minimum price"
                 android:inputType="number"
-                android:textColor="#ffffff"
-                android:textColorHint="#ffffff"
                 android:padding="10dp"
                 />
         </android.support.design.widget.TextInputLayout>
@@ -135,8 +128,6 @@
                 android:layout_marginBottom="10dp"
                 android:hint="Maximum price"
                 android:inputType="number"
-                android:textColor="#ffffff"
-                android:textColorHint="#ffffff"
                 android:padding="10dp"/>
         </android.support.design.widget.TextInputLayout>
 

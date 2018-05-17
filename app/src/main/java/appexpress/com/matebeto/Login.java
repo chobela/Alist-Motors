@@ -56,7 +56,7 @@ public class Login extends AppCompatActivity {
         inputEmail = (EditText) findViewById(R.id.email);
         inputPassword = (EditText) findViewById(R.id.password);
         btnLogin = (Button) findViewById(R.id.btnLogin);
-        forgot = (TextView) findViewById(R.id.textView2);
+       // forgot = (TextView) findViewById(R.id.textView2);
 
         String indicator=getIntent().getStringExtra("loading");
         avi= (AVLoadingIndicatorView) findViewById(R.id.avi);

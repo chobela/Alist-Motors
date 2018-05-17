@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 public class FragmentNavigationDrawer  extends Fragment implements View.OnClickListener {
 
-    private static TextView txtweb, txtfb, txtwts,  txtent,  txtsck;
+    private static TextView txtweb, txtfb, txtwts,  txtent, txab, txprof;
 
 
     @Override
@@ -36,6 +36,12 @@ public class FragmentNavigationDrawer  extends Fragment implements View.OnClickL
         txtent = (TextView) view.findViewById(R.id.entertainment);
         txtent.setOnClickListener(this);
 
+        txab = (TextView) view.findViewById(R.id.about);
+        txab.setOnClickListener(this);
+
+        txprof = (TextView) view.findViewById(R.id.profile);
+        txprof.setOnClickListener(this);
+
 
         return view;
 
@@ -44,7 +50,7 @@ public class FragmentNavigationDrawer  extends Fragment implements View.OnClickL
     public void onClick(View view) {
         switch (view.getId()) {
             case (R.id.hotdeals):
-                Intent intent = new Intent(getActivity(), MainActivity.class);
+                Intent intent = new Intent(getActivity(), Cars.class);
                 startActivity(intent);
                 break;
 
@@ -54,8 +60,18 @@ public class FragmentNavigationDrawer  extends Fragment implements View.OnClickL
                 break;
 
             case (R.id.insurance):
-                Intent intent3 = new Intent(getActivity(), MainActivity.class);
+                Intent intent3 = new Intent(getActivity(), Cars.class);
                 startActivity(intent3);
+                break;
+
+            case (R.id.profile):
+                Intent intent5 = new Intent(getActivity(), Profile.class);
+                startActivity(intent5);
+                break;
+
+            case (R.id.about):
+                Intent intent4 = new Intent(getActivity(), About.class);
+                startActivity(intent4);
                 break;
         }
 }

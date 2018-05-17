@@ -8,18 +8,12 @@
         app:showAsAction="always"
         android:title="Search"/>
 
-
     <item
-        android:id="@+id/about"
+        android:id="@+id/buy"
         android:orderInCategory="100"
-        android:title="About"
+        android:title="Buy"
         app:showAsAction="never" />
 
-    <item
-        android:id="@+id/profile"
-        android:orderInCategory="100"
-        android:title="Profile"
-        app:showAsAction="never" />
 
     <item
         android:id="@+id/add"
@@ -27,11 +21,6 @@
         android:title="Sell"
         app:showAsAction="never" />
 
-    <item
-        android:id="@+id/buy"
-        android:orderInCategory="100"
-        android:title="Buy"
-        app:showAsAction="never" />
 
     <item
         android:id="@+id/search"

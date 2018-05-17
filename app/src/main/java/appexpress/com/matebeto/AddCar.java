@@ -115,6 +115,9 @@ public class AddCar extends AppCompatActivity  {
                     .setMaxRetries(2)
                     .startUpload(); //Starting the upload
 
+            Intent intent = new Intent(AddCar.this, Thanks.class);
+            startActivity(intent);
+
         } catch (Exception exc) {
             Log.e("error", exc.getMessage(), exc);
         }

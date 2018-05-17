@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, AddCar.class); startActivity(i);
+                Intent i = new Intent(MainActivity.this, CarInfo.class); startActivity(i);
             }
         });
 
