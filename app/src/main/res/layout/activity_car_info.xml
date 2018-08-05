@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="appexpress.com.matebeto.CarInfo"
+    android:background="@color/White"
+    tools:context="appexpress.com.alist.CarInfo"
    >
 
     <android.support.design.widget.AppBarLayout
@@ -37,7 +38,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    tools:context="appexpress.com.matebeto.CarInfo">
+    tools:context="appexpress.com.alist.CarInfo">
 
     <TextView
         android:id="@+id/uid"
@@ -47,40 +48,121 @@
         android:visibility="invisible"
         />
 
-
-    <android.support.design.widget.TextInputLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-      >
-
-        <EditText
-            android:id="@+id/meal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:hint="Make"
-            android:inputType="text"
-            android:textColor="#000000"
-            android:textColorHint="@color/colorAccent"
-            android:padding="10dp"/>
-    </android.support.design.widget.TextInputLayout>
-
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:background="@color/White"
+        android:padding="10dp"
         >
 
+
         <EditText
-            android:id="@+id/model"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
+            android:id="@+id/phone"
+            android:layout_centerVertical="true"
+            android:background="@drawable/edt_corner"
+            android:inputType="number"
+            android:hint="Contact phone"
+            android:padding="10dp"
+            android:textAllCaps="true"
             android:layout_marginBottom="10dp"
-            android:hint="Model"
+            android:textColor="@color/Black"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/White"
+        android:padding="10dp"
+        >
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/email"
+            android:layout_centerVertical="true"
+            android:background="@drawable/edt_corner"
             android:inputType="text"
-            android:textColor="#000000"
-            android:textColorHint="@color/colorAccent"
-            android:padding="10dp"/>
-    </android.support.design.widget.TextInputLayout>
+            android:hint="Email address"
+            android:padding="10dp"
+            android:textAllCaps="true"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/Black"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/White"
+        android:padding="10dp"
+        >
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/town"
+            android:layout_centerVertical="true"
+            android:background="@drawable/edt_corner"
+            android:inputType="text"
+            android:hint="Town"
+            android:padding="10dp"
+            android:textAllCaps="true"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/Black"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/White"
+        android:padding="10dp"
+        >
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/meal"
+            android:layout_centerVertical="true"
+            android:background="@drawable/edt_corner"
+            android:inputType="text"
+            android:hint="Vehicle make"
+            android:padding="10dp"
+            android:textAllCaps="true"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/Black"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/White"
+        android:padding="10dp"
+        android:layout_marginTop="10dp">
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/model"
+            android:layout_centerVertical="true"
+            android:background="@drawable/edt_corner"
+            android:inputType="text"
+            android:hint="Vehicle model"
+            android:padding="10dp"
+            android:textAllCaps="true"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/Black"/>
+
+    </RelativeLayout>
 
     <TextView
         android:layout_width="fill_parent"
@@ -90,30 +172,38 @@
         />
 
     <Spinner
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@android:style/Widget.Holo.Light.Spinner"
-        android:padding="10dp"
-        android:paddingLeft="4dp"
         android:id="@+id/location"
-        android:layout_marginBottom="2dp"/>
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="2dp"
+        android:padding="10dp"
+        android:background="@drawable/gradient_spinner"
+        android:layout_below="@+id/txt"
+        style="@style/spinner_style"
+        />
 
-    <android.support.design.widget.TextInputLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        >
+        android:background="@color/White"
+        android:padding="10dp"
+        android:layout_marginTop="10dp">
+
 
         <EditText
-            android:id="@+id/price"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
+            android:layout_height="60dp"
+            android:id="@+id/price"
+            android:layout_centerVertical="true"
+            android:background="@drawable/edt_corner"
+            android:inputType="number"
             android:hint="Price"
-            android:inputType="text"
-            android:textColor="#000000"
-            android:textColorHint="@color/colorAccent"
-            android:padding="10dp"/>
-    </android.support.design.widget.TextInputLayout>
+            android:padding="10dp"
+            android:textAllCaps="true"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/Black"/>
+
+    </RelativeLayout>
 
 
 
@@ -125,30 +215,39 @@
         />
 
     <Spinner
+        android:id="@+id/currency"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@android:style/Widget.Holo.Light.Spinner"
+        android:layout_height="60dp"
+        android:layout_marginBottom="2dp"
         android:padding="10dp"
         android:paddingLeft="4dp"
-        android:id="@+id/currency"
-        android:layout_marginBottom="2dp"/>
+        android:background="@drawable/gradient_spinner"
+        android:layout_below="@+id/txt"
+        style="@style/spinner_style"
+        />
 
-    <android.support.design.widget.TextInputLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        >
+        android:background="@color/White"
+        android:padding="10dp"
+        android:layout_marginTop="10dp">
+
 
         <EditText
-            android:id="@+id/engine"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
+            android:layout_height="60dp"
+            android:id="@+id/engine"
+            android:layout_centerVertical="true"
+            android:background="@drawable/edt_corner"
+            android:inputType="number"
             android:hint="Engine Size"
-            android:inputType="text"
-            android:textColor="#000000"
-            android:textColorHint="@color/colorAccent"
-            android:padding="10dp"/>
-    </android.support.design.widget.TextInputLayout>
+            android:padding="10dp"
+            android:textAllCaps="true"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/Black"/>
+
+    </RelativeLayout>
 
     <TextView
         android:layout_width="fill_parent"
@@ -157,14 +256,18 @@
         android:layout_marginTop="10dp"
         />
 
+
     <Spinner
+        android:id="@+id/duty"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@android:style/Widget.Holo.Light.Spinner"
+        android:layout_height="60dp"
+        android:layout_marginBottom="2dp"
         android:padding="10dp"
         android:paddingLeft="4dp"
-        android:id="@+id/duty"
-        android:layout_marginBottom="2dp"/>
+        android:background="@drawable/gradient_spinner"
+        android:layout_below="@+id/txt"
+        style="@style/spinner_style"
+        />
 
     <TextView
         android:layout_width="fill_parent"
@@ -173,33 +276,42 @@
         android:layout_marginTop="10dp"
         />
 
+
     <Spinner
+        android:id="@+id/fuel"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@android:style/Widget.Holo.Light.Spinner"
+        android:layout_height="60dp"
+        android:layout_marginBottom="2dp"
         android:padding="10dp"
         android:paddingLeft="4dp"
-        android:id="@+id/fuel"
-        android:layout_marginBottom="2dp"/>
+        android:background="@drawable/gradient_spinner"
+        android:layout_below="@+id/txt"
+        style="@style/spinner_style"
+        />
 
 
-    <android.support.design.widget.TextInputLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        >
+        android:background="@color/White"
+        android:padding="10dp"
+        android:layout_marginTop="10dp">
+
 
         <EditText
-            android:id="@+id/color"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
+            android:id="@+id/color"
+            android:layout_centerVertical="true"
+            android:background="@drawable/edt_corner"
+            android:inputType="number"
+            android:hint="Vehicle Color"
+            android:padding="10dp"
+            android:textAllCaps="true"
             android:layout_marginBottom="10dp"
-            android:hint="Color"
-            android:inputType="text"
-            android:textColor="#000000"
-            android:textColorHint="@color/colorAccent"
-            android:padding="10dp"/>
-    </android.support.design.widget.TextInputLayout>
+            android:textColor="@color/Black"/>
 
+    </RelativeLayout>
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -208,31 +320,39 @@
         />
 
     <Spinner
+        android:id="@+id/interior"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@android:style/Widget.Holo.Light.Spinner"
+        android:layout_height="60dp"
+        android:layout_marginBottom="2dp"
         android:padding="10dp"
         android:paddingLeft="4dp"
-        android:id="@+id/interior"
-        android:layout_marginBottom="2dp"/>
+        android:background="@drawable/gradient_spinner"
+        android:layout_below="@+id/txt"
+        style="@style/spinner_style"
+        />
 
-    <android.support.design.widget.TextInputLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        >
+        android:background="@color/White"
+        android:padding="10dp"
+        android:layout_marginTop="10dp">
+
 
         <EditText
-            android:id="@+id/venue"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
+            android:id="@+id/venue"
+            android:layout_centerVertical="true"
+            android:background="@drawable/edt_corner"
+            android:inputType="number"
+            android:hint="Other features"
+            android:padding="10dp"
+            android:textAllCaps="true"
             android:layout_marginBottom="10dp"
-            android:hint="Other Features"
-            android:inputType="text"
-            android:textColor="#000000"
-            android:textColorHint="@color/colorAccent"
-            android:padding="10dp"/>
-    </android.support.design.widget.TextInputLayout>
+            android:textColor="@color/Black"/>
 
+    </RelativeLayout>
 
 
 </LinearLayout>

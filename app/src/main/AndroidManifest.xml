@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="appexpress.com.matebeto">
+    package="appexpress.com.alist">
 
     <uses-permission android:name="permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:name=".AppController"
@@ -91,9 +91,11 @@
             android:name=".Modify"
             android:label="Details"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Thanks"
+        <activity
+            android:name=".Thanks"
             android:label="Thank You"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/AppTheme" />
+        <activity android:name=".Feed"></activity>
     </application>
 
 </manifest>

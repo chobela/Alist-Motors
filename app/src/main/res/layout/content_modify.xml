@@ -14,7 +14,7 @@
         android:orientation="vertical"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        tools:context="appexpress.com.matebeto.Modify"
+        tools:context="appexpress.com.alist.Modify"
         tools:showIn="@layout/activity_modify">
 
 

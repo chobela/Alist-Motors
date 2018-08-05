@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Matebeto.iml" filepath="$PROJECT_DIR$/Matebeto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Alist-Motors.iml" filepath="$PROJECT_DIR$/Alist-Motors.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

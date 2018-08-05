@@ -30,7 +30,7 @@
             android:paddingLeft="@dimen/activity_horizontal_margin"
             android:paddingRight="@dimen/activity_horizontal_margin"
             android:paddingTop="20dp"
-            tools:context="appexpress.com.matebeto.Login"
+            tools:context="appexpress.com.alist.Login"
             android:orientation="vertical"
             android:weightSum="1">
 

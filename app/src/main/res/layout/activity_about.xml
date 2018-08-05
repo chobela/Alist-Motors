@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="appexpress.com.matebeto.About"
+    tools:context="appexpress.com.alist.About"
    >
 
     <android.support.design.widget.AppBarLayout
@@ -35,7 +35,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
     android:layout_marginTop="56dp"
-    tools:context="appexpress.com.matebeto.About">
+    tools:context="appexpress.com.alist.About">
 
     <TextView
         android:textStyle="bold"

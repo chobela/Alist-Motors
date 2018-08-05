@@ -32,36 +32,20 @@
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="16dp">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="#e3e3e3"/>
 
-                <ImageView
 
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_centerVertical="true"
-                    android:layout_marginRight="16dp"
-                    android:src="@drawable/deals" />
-
-                <TextView
-                    android:id="@+id/hotdeals"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_gravity="center_vertical"
-                    android:text="Hot Deals"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="#666" />
-            </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/cardeals"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:padding="16dp"
+                android:onClick="onClick"
                 >
 
                 <ImageView
@@ -73,24 +57,31 @@
                     android:src="@drawable/taxi" />
 
                 <TextView
-                    android:id="@+id/shop"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_gravity="center_vertical"
-                    android:text="Cars"
+                    android:text="All Cars"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="#666"
-                    android:onClick="onClick"/>
+                    android:textSize="15dp"
+                   />
             </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="#e3e3e3"/>
 
 
 
             <LinearLayout
+                android:id="@+id/bikedeals"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="16dp">
+                android:padding="16dp"
+               >
 
                 <ImageView
                     android:layout_width="24dp"
@@ -100,23 +91,30 @@
                     android:src="@drawable/bike" />
 
                 <TextView
+                    android:textSize="15dp"
                     android:id="@+id/insurance"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_gravity="center_vertical"
-                    android:text="Motorbikes"
+                    android:text="All Bikes"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="#666" />
             </LinearLayout>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="#e3e3e3"/>
+
             <LinearLayout
+                android:id="@+id/truckdeals"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:padding="16dp">
 
-                <ImageView
+               <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_centerVertical="true"
@@ -124,22 +122,24 @@
                     android:src="@drawable/truck" />
 
                 <TextView
+                    android:textSize="15dp"
                     android:id="@+id/entertainment"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_gravity="center_vertical"
-                    android:text="Trucks"
+                    android:text="All Trucks"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="#666" />
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#666"/>
+                android:layout_height="4dp"
+                android:background="#e3e3e3"/>
 
             <LinearLayout
+                android:id="@+id/about"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -150,35 +150,11 @@
                     android:layout_height="24dp"
                     android:layout_centerVertical="true"
                     android:layout_marginRight="16dp"
-                    android:src="@drawable/profile" />
+                    android:src="@drawable/baseline_list_black_24dp" />
 
                 <TextView
-                    android:id="@+id/profile"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_gravity="center_vertical"
-                    android:text="My Profile"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="#666" />
-            </LinearLayout>
+                    android:textSize="15dp"
 
-            <LinearLayout
-
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="16dp">
-
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_centerVertical="true"
-                    android:layout_marginRight="16dp"
-                    android:src="@drawable/about" />
-
-                <TextView
-                    android:id="@+id/about"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"

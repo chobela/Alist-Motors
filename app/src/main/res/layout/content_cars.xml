@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/viewBg"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="appexpress.com.matebeto.Cars"
+    tools:context="appexpress.com.alist.Cars"
     tools:showIn="@layout/activity_main">
 
     <com.wang.avi.AVLoadingIndicatorView

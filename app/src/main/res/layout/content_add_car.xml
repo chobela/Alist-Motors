@@ -15,7 +15,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="appexpress.com.matebeto.AddCar"
+    tools:context="appexpress.com.alist.AddCar"
     tools:showIn="@layout/activity_add_car"
     android:orientation="vertical"
     android:layout_marginTop="54dp">
